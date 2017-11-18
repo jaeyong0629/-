@@ -1,6 +1,6 @@
 class Block
-//'Á¶Ä¿'ÀÇ °æ¿ì, n_array¸¦ private·Î ³ÖÀ¸¸é ¹®Á¦°¡ »ı±æ °Í °°À½.
-// ±×·¸´Ù°í ÇØ¼­ public¿¡ ³ÖÀ¸¸é, °ªÀÌ ¹Ù²ğ ¼ö ÀÖ´Â ¹®Á¦°¡ »ı±è.  
+//'ì¡°ì»¤'ì˜ ê²½ìš°, n_arrayë¥¼ privateë¡œ ë„£ìœ¼ë©´ ë¬¸ì œê°€ ìƒê¸¸ ê²ƒ ê°™ìŒ.
+// ê·¸ë ‡ë‹¤ê³  í•´ì„œ publicì— ë„£ìœ¼ë©´, ê°’ì´ ë°”ë€” ìˆ˜ ìˆëŠ” ë¬¸ì œê°€ ìƒê¹€.  
 {
 	private:
 		int n_outside; 		//surface value for game. range: 0 to 11
@@ -13,3 +13,4 @@ class Block
 		int belongTo; 		//where the block belongs to. 			//when belongTo=0, the block is belong to me(player0)
 		int raw; 		//check if the block is picked within one turn.
 };
+
