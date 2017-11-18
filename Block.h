@@ -8,7 +8,7 @@ class Block
 		char color; 		//B=black, W=white
 
 	public:
-		Block(int n_out, char color_); 7
+		Block(int n_out, char color_);
 		int open=0; 		//whether the block is open to everyone. 	//0: hide 1:open
 		int belongTo; 		//where the block belongs to. 			//when belongTo=0, the block is belong to me(player0)
 		int raw=1; 		//check if the block is picked within one turn.
