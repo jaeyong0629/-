@@ -9,9 +9,7 @@ class Block
 
 	public:
 		Block(int n_out, char color_); 7
-		int open; 		//whether the block is open to everyone. 	//0: hide 1:open
+		int open=0; 		//whether the block is open to everyone. 	//0: hide 1:open
 		int belongTo; 		//where the block belongs to. 			//when belongTo=0, the block is belong to me(player0)
-		int raw; 		//check if the block is picked within one turn.
+		int raw=1; 		//check if the block is picked within one turn.
 };
-
-//check whether the edit is applied.
