@@ -1,0 +1,28 @@
+class GameSystem
+{
+private:
+    int turn_counter;//count the number of attack chance
+    int whose_turn;//let us know whose attack turn
+public:
+    char block_condition();
+    /*This function show the block's number and color and order.
+    If block is open, it shows anywhere it is. If block is close, it shows as '*'.
+    But main player's block have to show.
+    It will print the order and color and number.
+    order  :  1  2  3  4  5  6  7
+    color  :  w  w  b  b  b  w  b
+    number :  0  *  *  7  *  * 11
+    */
+    void attack();
+    /*This function control the attack.
+    First check whose_turn and judge whether get input.
+    If real player's turn, then get input about player number, block order and block number.
+    Then compare the input data with chosen data.
+    If it right, ++ turn_counter and ask whether attack one more or not.*/
+    void dead_or_alive();
+    /*This function read block.
+    If there are players who do not have any close block,
+    then retire him from the game*/
+    void winner();
+    //If there is only one player left, then make him winner and stop the game.
+}

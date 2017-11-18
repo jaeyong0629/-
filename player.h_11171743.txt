@@ -1,0 +1,31 @@
+class Player
+{
+protected:
+	int n;				//소지한 block 수
+	Block* blocks;			//소지한 block array
+
+public:
+	int survive;			//생존 여부, 초기값 0
+	player(int n_);			
+	//~player();			
+	virtual void attack() {}	//상대 block 맞히는 공격 가상 함수, User: input을 요구하는 문장 출력 및 input 처리, Cpu: 공격 전략 함수
+	int count;			//턴 수
+	void block_draw();		//block 뽑는 함수
+	void blocks_sort();		//block 정렬 함수
+};
+
+class User : public Player
+{
+public:
+	User(int n_) : Player{n_} {}
+	//~User() {}
+	void attack();			//상대 block hit하는 공격 함수, input을 요구하는 문장 출력 및 input 처리
+};
+
+class COM : public Player
+{
+public:
+	COM(int n_) : Player{n_} {}
+	//~COM() {}
+	void attack();			//COM 난이도별 전략함수
+};

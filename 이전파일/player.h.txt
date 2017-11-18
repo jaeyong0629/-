@@ -1,0 +1,27 @@
+// player.h
+class Player
+{
+private:
+	int n;				//소지한 block 수, 초기값 4
+	int* blocks;			//소지한 block array, heap에 할당, 할당할 공간 9
+	int suv;			//생존 여부, 초기값 0
+public:
+	player(int n_ = 4);		//생성자, block[]에 block 랜덤 배정
+	~player();			//소멸자
+	virtual void attack() {}	//상대 block 맞히는 공격 가상 함수, User: input을 요구하는 문장 출력 및 input 처리, Cpu: 공격 전략 함수
+	int count;			//턴 수
+};
+
+class User : public Player {
+public:
+	User(int n_) : Player{n_} {}
+	~User() {}
+	void attack();			//상대 block 맞히는 공격 함수, input을 요구하는 문장 출력 및 input 처리
+}
+
+class Cpu : public Player {
+public:
+	Cpu(int n_) : Player{n_} {}
+	~Cpu() {}
+	void attack();			//Cpu 난이도별 전략함수
+}
