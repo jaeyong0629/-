@@ -1,0 +1,23 @@
+//Game System
+char blockCondition()
+
+void atkSuccess()
+
+void kill()
+
+void winner()
+
+
+
+//Player
+void blockDraw()
+
+void blockSort()
+
+
+//User
+void attack()
+
+
+//COM
+void attack()
