@@ -1,0 +1,131 @@
+Player::Player()
+{
+	n = 4;
+	blocks = new (Block*)[13];
+	for (int i = 0; i < n; i++)
+	{
+		blocks[i] = deck.top();
+		deck.pop();
+	}
+	blockSort()
+}
+
+void Player::blockSort();
+{
+	double* narrayList = new double[n];
+	for (int i = 0; i < n; i++)
+		noutList[i] = blocks[i].n_array;
+	narrayList.sort();
+	Block* tempList = new (Block*)[n];
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (narrayList[i] == blocks[j].n_array)
+				tempList[i] = block[i];
+			break;
+		}
+	}
+	delete[] noutList;
+	delete[] blocks;
+	blocks = tempList;
+}
+
+void Player::blockDraw()
+{
+	blocks[n] = deck.top();
+	deck.pop();
+	n += 1;
+}
+
+void Player::attackSuccess()
+{
+	while (true)
+	{
+		string again {};
+		if (nameCOM.blocks[orderBlock].n_out == numberBlock)
+		{
+			cout << "Successfully attacked!" << endl;
+			nameCOM.blocks[orderBlock].open = 1;
+			for (int i = 0; i < nameCOM.block[orderBlock].n < i++)
+			{
+				if (nameCOM.blocks[orderBlock].open == 0)
+					nOpened =+ 1;
+				else
+					continue;
+			}
+			if (nOpend == nameCOM.n)
+				nameCOM.survive = 0;
+			
+			while (true)
+			{
+				cout << "Do you want to attack again? Answer Yes or No"<< endl;
+				getline(cin, again);
+				if (again != "Yes" or again != "No)
+					continue;
+				else
+					break;
+			}
+			if (namePlayer = 0)
+			{
+				if (again == "Yes")
+				{
+					this->attack();
+					continue;
+				}
+				else
+					break;
+			}
+		}
+		else
+		{
+			cout << "You missed!" << endl;
+			break;
+		}
+	}
+}
+
+void User::attack()
+{
+	nameCOM {};
+	orderBlock = -1;
+	numberBlock = -1;
+	
+	while (true)
+	{
+		cout << "Enter the name whose you want to hit: ";
+		getline(cin, nameCOM);
+		if (nameCOM != COM1 or nameCOM != COM2)
+			cout << "Wrong name!" << endl;
+		else
+			break;		
+	}
+	while (true)
+	{
+		
+		cout << "Enter the order of the block: ";
+		getline(cin, orderBlock);
+		if (orderBlock < 0 or orderBlock > nameCOM.n)		//nameCOM.n right?
+			cout << "Wrong order!" << endl;
+		else
+			break;
+	}
+	while (true)
+	{
+		cout << "Enter the number of the block: ";
+		getline(cin, numberBlock);
+		int end = 0;
+		for (int i = 0; i < nameCOM.n; i++)
+		{
+			if (numberBlock == nameCOM.blocks[i].n_out)	//nameCOM.blocks[i].n_out right?
+			{
+				end = 1;
+				break;
+			}
+			else
+				cout << "There is no number" << numberBlock << endl;
+		}
+		if (end)
+			break;
+	}
+}

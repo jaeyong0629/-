@@ -1,0 +1,79 @@
+void GameSystem::blockcondition()
+{
+	cout.width(30);
+	cout.fill('-');
+	cout << '-' << endl;
+	cout << "Turn : " << turnCounter << endl;
+	cout << endl;
+	cout << "User :" << endl;
+	cout << endl;
+	cout << "order  :";
+	for (int i = 1; i < number_of_blocks + 1; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << i;
+	}
+	cout << endl;
+	cout << "color  :";
+	for (int i = 0; i < number_of_blocks; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << color[i];
+	}
+	cout << endl;
+	cout << "number :";
+	for (int i = 0; i < number_of_blocks; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << block[i];
+	}
+	cout << endl;
+	cout << "open   :";
+	for (int i = 0; i < number_of_blocks; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << open[i];
+	}
+	cout << endl;
+	cout << endl;
+	cout << "COM1 :" << endl;
+	cout << endl;
+	cout << "order  :";
+	for (int i = 1; i < number_of_blocks + 1; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << i;
+	}
+	cout << endl;
+	cout << "color  :";
+	for (int i = 0; i < number_of_blocks; i++)
+	{
+		cout.width(3);
+		cout.fill(' ');
+		cout << color[i];
+	}
+	cout << endl;
+	cout << "number :";
+	for (int i = 0; i < number_of_blocks; i++)
+	{
+		if (open[i] == 1)
+		{
+			cout.width(3);
+			cout.fill(' ');
+			cout << block[i];
+		}
+		else
+		{
+			cout.width(3);
+			cout.fill(' ');
+			cout << "*";
+		}
+	}
+	cout << endl;
+	//COM2 도 똑같이 짜면 됨.
+}
